@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--dark-slate-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  /* height: 100vh; */
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 70%;
+  height: 70%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+.left {
+  padding: 1rem;
+  width: 60%;
+}
+
+.left h1 {
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  color: var(--dark-slate-grey);
+}
+
+.lists {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.lists .list {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.lists .list p {
+  margin-left: 1rem;
+}
+
+p {
+  font-size: 16px;
+  color: var(--charcoal-grey);
+  font-family: "Roboto", sans-serif;
+}
+
+.inputs input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--grey);
+  margin-top: 0.3rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  margin-top: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--tomato);
+}
+
+.right {
+  width: 40%;
+}
+
+.right img {
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+}
+
+.hide {
+  display: none;
+}
+
+.success-login-desktop {
+  width: 350px;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.success-login-desktop h1 {
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.success-login-desktop span {
+  color: var(--dark-slate-grey);
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .right {
+    width: unset;
+  }
+  .left {
+    width: unset;
+  }
+}
+
+.attribution {
+  position: absolute;
+  text-align: center;
+  bottom: 1rem;
+}
+
+.attribution a {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .main-content {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .right {
+    order: 1;
+    height: 40%;
+    width: 100%;
+    padding: 0;
+  }
+  .left {
+    order: 2;
+    height: unset;
+  }
+  .left h1 {
+    padding-top: 0;
+  }
+  .right img {
+    content: url(./images/illustration-sign-up-mobile.svg);
+  }
+  .success-login-desktop {
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 8rem;
+  }
+
+  .success-login-desktop img {
+    margin-bottom: 2rem;
+  }
+
+  .success-login-desktop button {
+    margin-top: 15rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
